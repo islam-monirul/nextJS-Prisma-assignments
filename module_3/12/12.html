@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Change Attribute Value</title>
+  </head>
+  <body>
+    <img id="myImg" src="./one.jpg" alt="Picture" />
+    <br />
+    <button onclick="changeImgSrc()">Change Picture</button>
+
+    <script>
+      function changeImgSrc() {
+        document.getElementById("myImg").src = "./two.jpg";
+      }
+    </script>
+  </body>
+</html>

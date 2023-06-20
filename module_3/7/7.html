@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Common Events</title>
+  </head>
+  <body>
+    <h3>Things we can do on this page</h3>
+    <ul>
+      <li>Click anywhere to get the (x,y) coordinates.</li>
+      <li>Press any key to get key code.</li>
+      <li>Move the mouse over the image to change it.</li>
+    </ul>
+
+    <img
+      id="myImg"
+      src="./one.jpg"
+      alt="Picture"
+      width="150px"
+      onmouseover="changeSrc()"
+    />
+    <script>
+      document.addEventListener("click", (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+
+        alert(`X: ${x}, Y: ${y}`);
+      });
+
+      document.addEventListener("keypress", (e) => {
+        let keyCode = e.keyCode;
+        alert(keyCode);
+      });
+
+      function changeSrc() {
+        document.getElementById("myImg").src = "./two.jpg";
+      }
+    </script>
+  </body>
+</html>
